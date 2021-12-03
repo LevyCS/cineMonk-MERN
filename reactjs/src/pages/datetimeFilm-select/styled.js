@@ -1,14 +1,14 @@
 import styled  from "styled-components";
 
 const Container = styled.div`
-    height: 100%;
     width: 100%;
-    display: flex;
+    margin-top: 4rem;
     
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    
 
     .boxMovie {
         

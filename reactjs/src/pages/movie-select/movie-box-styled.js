@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
+    :hover {
+        transform: 0.6s;
+        background: #961B1B;
+    }
+
     display: flex;
     flex-direction: row;
     align-items: center;
