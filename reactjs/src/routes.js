@@ -3,6 +3,7 @@ import Home from './pages/home'
 import DataSelect from './pages/data-select'
 import MovieSelect from './pages/movie-select'
 import DateTimeMovie from './pages/datetimeFilm-select'
+import SeatSelect from './pages/seat-select'
 
 export default function Rout () {
     return (
@@ -12,6 +13,7 @@ export default function Rout () {
                 <Route path="dates" element={<DataSelect /> } />
                 <Route path="movie" element={<MovieSelect /> } />
                 <Route path="session" element={<DateTimeMovie />} />
+                <Route path='seat' element={<SeatSelect />} />
             </Routes>
         </BrowserRouter>
     )

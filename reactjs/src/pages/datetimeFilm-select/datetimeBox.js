@@ -6,13 +6,13 @@ export default function DateTimeBox() {
     return (
         <Container>
             <div>
-                {/* <Link to='/session'> */}
+                <Link to='/seat '>
                     <Container>
                         <div> Sala 08 </div>
                         <div> 13:00 </div>
                         <div> Legendado </div>
                     </Container>
-                {/* </Link> */}
+                </Link>
             </div>
         </Container>
     )
