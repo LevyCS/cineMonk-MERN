@@ -1,6 +1,6 @@
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
-import Cabecalho from "../../components/cabecalho";
+import Cabecalho from "../../components/common/cabecalho";
 import { ContainerBackground } from "../../components/common/styled";
 import EachRow from "./eachRow";
 import { Container } from './styled'

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router'
-import { LogoText, Paragraph } from '../common/styled'
+import { LogoText, Paragraph } from '../styled'
 import { Container } from './styled'
 
 

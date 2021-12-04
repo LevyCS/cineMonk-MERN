@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router'
-import Cabecalho from '../../components/cabecalho'
+import Cabecalho from '../../components/common/cabecalho'
 import BoxMovie from '../../components/common/boxMovie/boxMovie'
 import { ContainerBackground } from '../../components/common/styled'
 import Selection from './selection'

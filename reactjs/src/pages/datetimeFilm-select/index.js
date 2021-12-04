@@ -1,5 +1,5 @@
 import { ContainerBackground } from "../../components/common/styled";
-import Cabecalho from "../../components/cabecalho";
+import Cabecalho from "../../components/common/cabecalho";
 import { Container } from "./styled";
 import BoxMovie from "../../components/common/boxMovie/boxMovie";
 import DateTimeBox from "./datetimeBox";

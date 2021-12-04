@@ -1,5 +1,5 @@
 import { ContainerBackground, Paragraph } from "../../components/common/styled"
-import Cabecalho from "../../components/cabecalho"
+import Cabecalho from "../../components/common/cabecalho"
 import { ContainerDataSelect } from "./styled"
 import { BigBox, SmallBox } from "./boxes"
 
