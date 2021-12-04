@@ -19,12 +19,12 @@ const Container = styled.div`
         box-shadow: 2px -2px 3px 2px rgba(11, 0, 0, 0.25), inset 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
         border-radius: 16px 16px 16px 0px;
 
-        >div {
+        > a > div {
             margin-bottom: 1%;
+        }
 
-            :last-child {
-                margin-top: 4%;
-            }
+        > a > div:last-child {
+            margin-top: 4%;
         }
 
         @media (max-width: 1024px) {

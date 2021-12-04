@@ -1,5 +1,5 @@
-import { TopLogo } from './styled'
-import { LogoText } from '../../components/common/styled'
+import { TopLogo } from './logo-styled'
+import { LogoText } from '../styled'
 
 
 export default function Logo() {

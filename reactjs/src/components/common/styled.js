@@ -25,4 +25,54 @@ const Paragraph = styled.div`
     font-family: 'Share Tech';
 `
 
-export { ContainerBackground, LogoText, Paragraph }
+const GrayButton = styled.button`
+    background: radial-gradient(50% 50% at 50% 50%, #F4F4F4 0%, #C1C1C1 100%);
+    outline: none;
+    height: 14.5vh;
+    width: 14.5vh;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    color: #626262;
+    text-shadow: 0px 4px 10px rgba(108, 108, 108, 0.25);
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    :hover {
+        background: radial-gradient(50% 50% at 50% 50%, #C4C4C4 0%, #C4C4C4 100%);
+    }
+`
+
+export const DarkGrayButton = styled.button`
+    background: radial-gradient(50% 50% at 50% 50%, #F4F4F4 0%, #C1C1C1 100%);
+    outline: none;
+    height: 14.5vh;
+    width: 14.5vh;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    color: #767676;
+    text-shadow: 0px 4px 10px rgba(108, 108, 108, 0.25);
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 2.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    :hover {
+        background: radial-gradient(50% 50% at 50% 50%, #C4C4C4 0%, #C4C4C4 100%);
+    }
+`
+
+export { ContainerBackground, LogoText, Paragraph, GrayButton }

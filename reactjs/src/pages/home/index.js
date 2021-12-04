@@ -1,6 +1,6 @@
 import { ContainerBackground, Paragraph } from '../../components/common/styled'
 import { ContainerHome } from './styled'
-import Logo from './logo'
+import Logo from '../../components/common/logo/logo'
 import Box from './box'
 
 export default function Home () {

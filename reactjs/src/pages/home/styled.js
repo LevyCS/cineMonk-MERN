@@ -11,20 +11,6 @@ const ContainerHome = styled.div`
     }
 `
 
-const TopLogo = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    padding-top: 3rem;
-
-    img {
-        width: 75px;
-        height: auto;
-    }
-`
-
 const ContainerBox = styled.button`
     :hover {
         transform: 0.6s;
@@ -52,4 +38,4 @@ const ContainerBox = styled.button`
 
 `
 
-export { ContainerHome, TopLogo, ContainerBox}
+export { ContainerHome, ContainerBox}
