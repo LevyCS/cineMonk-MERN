@@ -6,13 +6,15 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongodb": "^4.2.1",
     "nodemon": "^2.0.15",
     "sequelize": "^6.12.0-alpha.1",
     "sequelize-auto": "^0.8.6"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set PORT=3030 && nodemon ./index.js"
   },
   "keywords": [],
   "author": "",

@@ -24,7 +24,6 @@ export default function FinishBuy() {
                         })}
                     </div>
                     <div> <Link to='/'> <DarkGrayButton> Menu </DarkGrayButton> </Link></div>
-                        
                 </div>
             </Container>
         </ContainerBackground>
