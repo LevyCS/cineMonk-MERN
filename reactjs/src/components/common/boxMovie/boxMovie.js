@@ -1,15 +1,20 @@
 import { Container } from './boxMovie-styled'
 
 export default function BoxMovie(props) {
-    const movie = props.info;
+
+    const getImage = (img) => {
+        let r = `http://localhost:3030/sessoes/cover?imagePath=${img}`
+        return r;
+    }
+
     return (
         
         <Container> 
-           <img src={movie.imagem} alt='' />
+            <img src={getImage(props.info.capa)} alt='' />
             <div className='Text'>
-                <div> {movie.titulo} </div>
-                <div> {movie.dub} </div>
-                <div> Classificação: +{movie.classificacao} </div>
+                <div> {props.info.nome } </div>
+                <div> {props.info.idiomas }</div>
+                <div> Classificação: {props.info.classificacao} </div>
             </div>
         </Container>
     )

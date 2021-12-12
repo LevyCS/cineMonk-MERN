@@ -34,8 +34,9 @@ class SessoesDatabase {
 
         let resp = general.map(item => {
             return {
-                dia: getDayWeek(item.data),
                 data: item.data,
+                diaSemana: getDayWeek(item.data),
+                dia: getDayNumber(item.data),
                 mes: getMonth(item.data)
             }
         })
@@ -80,6 +81,11 @@ class SessoesDatabase {
 }
 
 module.exports = SessoesDatabase;
+
+function getDayNumber(data) {
+    data = new Date(`${data}T00:00:00`);
+    return data.getDate();
+}
 
 function getDayWeek(date) {
     if(date == today())

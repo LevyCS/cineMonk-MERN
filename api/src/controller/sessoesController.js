@@ -4,6 +4,8 @@ const Router = express.Router();
 const SessoesService = require('../service/sessoesService')
 const service = new SessoesService();
 
+const path = require('path')
+
 // TryCatch format
 // try {
 

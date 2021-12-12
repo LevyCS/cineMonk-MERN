@@ -3,17 +3,22 @@ import Cabecalho from "../../components/common/cabecalho"
 import { ContainerDataSelect } from "./styled"
 import { BigBox, SmallBox } from "./boxes"
 
+import Api from "../../service/apiSessoes"
+import { useState } from "react"
+const api = new Api();
 
 export default function DataSelect() {
-    const apiSimulation = [
-        '2020-10-11',
-        '2020-10-12',
-        '2020-10-13',
-        '2020-10-14',
-        '2020-10-15',
-        '2020-10-16',
-        '2020-10-17'
-    ]
+    const [dates, setDates] = useState([]);
+
+    const getDates = async () => {
+        let r = await api.availableDays();
+        setDates(r);
+    }
+
+    useState(() => {
+        getDates();
+    }, [])
+    
 
     return (
         <ContainerBackground>
@@ -21,17 +26,16 @@ export default function DataSelect() {
             <ContainerDataSelect>
                 <Paragraph> Escolha a data que você deseja comprar o ingresso. </Paragraph>
                 <div className="Boxes">
-                    <div className="BigBox"> <BigBox date={apiSimulation[0]}/> </div>
+                {!dates[0] ? <div> </div> :<div className="BigBox"> <BigBox date={dates[0]}/> </div>}
                     <div className="MiniBoxes">
-                        {delete apiSimulation[0]}
-                        
+                       
                         <div className="UpperBox">
-                            {apiSimulation.slice(0, 4).map((item, i) => {
+                            {!dates ? <div> </div> : dates.slice(1, 4).map((item, i) => {
                                 return <SmallBox key={i} date={item}/>
                             })}
                         </div> 
                         <div className="BottomBox"> 
-                            {apiSimulation.slice(4, 7).map((item, i) => {
+                            {!dates ? <div> </div> : dates.slice(4, 7).map((item, i) => {
                                 return <SmallBox key={i} date={item}/>
                             })}
                         </div>

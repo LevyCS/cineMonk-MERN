@@ -2,27 +2,34 @@ import { ContainerBackground } from "../../components/common/styled";
 import Cabecalho from '../../components/common/cabecalho'
 import MovieBox from "./movie-box";
 import { ContainerMovies } from "./styled";
+import { useState } from "react";
+import Api from "../../service/apiSessoes";
+import { useLocation } from "react-router-dom";
 
-const apiSimulation = {
-    'imagem': 'https://image.made-in-china.com/202f0j10SuQRndvhLWqK/New-Isuzu-Giga-8X4-Chassis-and-Cabin-380-and-420-and-460-HP.jpg',
-    'titulo': 'Caminhão muito brabo',
-    'dub': 'Lengadado e Dublado',
-    'classificacao': 18
-}
-
-let mapear = []
-for (let x = 0; x < 20; x++) {
-    mapear.push(x);
-}
+const api = new Api();
 
 export default function MovieSelect() {
+    const [movies, setMovies] = useState([]);
+
+    const location = useLocation();
+    const selectedDay = location.state;
+
+    const getMovies = async () => {
+        let r = await api.availableMovies(selectedDay);
+        setMovies(r);
+    }
+
+    useState(() => {
+        getMovies();
+    }, [])
+
     return (
         <ContainerBackground>
             <Cabecalho frase='Selecione o filme que deseja assistir'/>
             <ContainerMovies>
                 <div className='Container2'>
-                    {mapear.map(i => {
-                        return <div> <MovieBox key={i} info={apiSimulation} /> </div>
+                    {movies.map((item, i) => {
+                        return <div> <MovieBox key={i} info={item} /> </div>
                     })}
                 </div>
             </ContainerMovies>

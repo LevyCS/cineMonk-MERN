@@ -31,7 +31,7 @@ const Container = styled.div`
         :nth-child(2) {
             font-family: 'Spartan';
             margin-top: 10px;
-            font-size: 2.5em;
+            font-size: 2.4em;
         }
     }
 
