@@ -7,12 +7,12 @@ class SessoesService {
         return db.availableDays();
     }
 
-    availableMovies(day, page) {
-        return db.availableMovies(day, page);
+    availableMovies(day) {
+        return db.availableMovies(day);
     }
 
-    availableSession(day, movie, page) {
-        return db.availableSession(day, movie, page)
+    availableSession(day, movie) {
+        return db.availableSession(day, movie)
     }
 }
 

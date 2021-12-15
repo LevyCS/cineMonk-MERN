@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 export default function DateTimeBox(props) {
-    const hour = props.horario.horarios
+    const hour = props.horarios
     console.log(hour)
     return (
         <Container>

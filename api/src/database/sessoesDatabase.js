@@ -44,7 +44,7 @@ class SessoesDatabase {
         return resp;
     }
 
-    availableMovies(day, page) {
+    availableMovies(day) {
         let resp = db.find({
             data: day
         }).project({_id: 0}).toArray();
@@ -52,31 +52,13 @@ class SessoesDatabase {
         return resp;
     }
 
-    async availableSession(day, movie, page) {
-        let resp = await db.aggregate([
-            {
-                $match: {
-                    $and: [{data: day}, {'filme.nome': movie}]
-                }
-            },
-            {
-                $unwind: '$horarios'
-            },
-            {
-                $sort: {
-                   'horarios.hora': 1 
-                }
-            },
-            {
-                $project: {
-                    _id: 0,
-                    data: 0,
-                    filme: 0
-                }
-            }
-        ]).toArray();
+    async availableSession(day, movie) {
+        let resp = await db.findOne({
+            'data': day,
+            'filme.nome': movie
+        })
 
-        return resp;
+        return resp.horarios;
     }
 }
 

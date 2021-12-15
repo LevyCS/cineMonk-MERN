@@ -36,12 +36,12 @@ export default function DateTimeMovie() {
                 <div className='DateTime'> 
                     <div className='UpperBox'>
                         {hours.slice(0, 3).map(item => {
-                            return <div> <DateTimeBox info={location.state} horario={item}/> </div>       
+                            return <div> <DateTimeBox info={location.state} horarios={item}/> </div>       
                         })}
                     </div>
                     <div className='BottomBox'>
                         {hours.slice(3, 7).map(item => {
-                                return <div> <DateTimeBox info={location.state} horario={item}/> </div>       
+                                return <div> <DateTimeBox info={location.state} horarios={item}/> </div>       
                             })}
                     </div>
                 </div>

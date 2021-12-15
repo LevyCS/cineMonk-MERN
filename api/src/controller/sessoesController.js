@@ -26,7 +26,7 @@ Router.get('/availableMovies', async (req, resp) => {
     // query params
     // ?day=&page=
     try {
-        let r = await service.availableMovies(req.query.day, req.query.page)
+        let r = await service.availableMovies(req.query.day)
         resp.send(r);
     } catch(e) {
         resp.status(400).send({erro: e.toString()})
@@ -35,8 +35,8 @@ Router.get('/availableMovies', async (req, resp) => {
 
 Router.get('/availableSession', async (req, resp) => {
     try {
-        let { day, movie, page } = req.query
-        let r = await service.availableSession(day, movie, page)
+        let { day, movie } = req.query
+        let r = await service.availableSession(day, movie)
         resp.send(r)
     } catch(e) {
         resp.status(400).send({erro: e.toString()})

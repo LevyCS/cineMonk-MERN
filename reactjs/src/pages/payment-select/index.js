@@ -18,7 +18,7 @@ export default function PaymentScreen() {
             <Cabecalho frase='Selecione a melhor opção de pagamento' />
             <Container>
                 <div className='Movie'>
-                    <BoxMovie info={location.state}/>
+                    <BoxMovie info={location.state.filme}/>
                 </div>
                 <div className='parte2'>
                     <div className='Payment'>
