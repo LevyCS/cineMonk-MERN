@@ -50,6 +50,4 @@ Router.get('/cover', async (req, resp) => {
     resp.sendFile(imagePath, { root: path.join(dirname) })
 });
 
-
-
 module.exports = Router;

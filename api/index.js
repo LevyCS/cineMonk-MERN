@@ -9,10 +9,16 @@ server.use(express.json())
 const SessoesController = require('./src/controller/sessoesController')
 server.use('/sessoes', SessoesController)
 
+const LugaresController = require('./src/controller/lugaresController')
+server.use('/lugares', LugaresController)
+
 
 function startServer(conn) {
-    const db = require('./src/database/sessoesDatabase')
-    db.injectDB(conn)
+    const sessoesDb = require('./src/database/sessoesDatabase')
+    const lugaresDb = require('./src/database/lugaresDatabase')
+
+    sessoesDb.injectDB(conn)
+    lugaresDb.injectDB(conn)
 
     server.listen(process.env.PORT, 
         x => console.log(`Subiu na porta ${process.env.PORT}`))
